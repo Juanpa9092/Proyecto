@@ -54,6 +54,11 @@ function insertarBicicletas() {
 
             success      :  function(response){
                                consultarBicicletas()
+                               document.getElementById("id").value = "";
+                               document.getElementById("brand").value = "";
+                               document.getElementById("model").value = "";
+                               document.getElementById("category").value = "";
+                               document.getElementById("name").value = "";
                                console.log(response);
                             },
             error       :   function(xhr,status){
@@ -83,6 +88,7 @@ function borrarBicicletas() {
 
             success      :  function(response){
                                 consultarBicicletas();
+                                document.getElementById("idBorrar").value = "";
                                 console.log(response);
 
                             },
@@ -116,6 +122,11 @@ function actualizarBicicletas() {
 
                     success      :  function(response){
                                         consultarBicicletas();
+                                        document.getElementById("idActualizar").value = "";
+                                        document.getElementById("brandActualizar").value = "";
+                                        document.getElementById("modelActualizar").value = "";
+                                        document.getElementById("categoryActualizar").value = "";
+                                        document.getElementById("nameActualizar").value = "";
                                         console.log(response);
                                     },
                     error       :   function(xhr,status){
@@ -156,6 +167,8 @@ function consultarIdBicicletas() {
                                             $("#idDivConsulta").append("</tr>");
                                         }
                                         $("#idDivConsulta").append("</table>");
+                                        document.getElementById("idConsulta").value = "";
+
 
 
                                         console.log(json)
@@ -222,6 +235,10 @@ function insertarClientes() {
 
             success      :  function(response){
                                consultarClientes();
+                               document.getElementById("idCliente").value = "";
+                               document.getElementById("nameCliente").value = "";
+                               document.getElementById("correo").value = "";
+                               document.getElementById("age").value = "";
                                console.log(response);
                             },
             error       :   function(xhr,status){
@@ -251,6 +268,7 @@ function borrarClientes() {
 
             success      :  function(response){
                                 consultarClientes();
+                                document.getElementById("idClienteBorrar").value = "";
                                 console.log(response);
 
                             },
@@ -283,6 +301,10 @@ function actualizarClientes() {
 
                     success      :  function(response){
                                         consultarClientes();
+                                        document.getElementById("idClienteActualizar").value = "";
+                                        document.getElementById("nameClienteActualizar").value = "";
+                                        document.getElementById("correoActualizar").value = "";
+                                        document.getElementById("ageActualizar").value = "";
                                         console.log(response);
                                     },
                     error       :   function(xhr,status){
