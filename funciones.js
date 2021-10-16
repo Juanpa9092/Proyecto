@@ -333,7 +333,7 @@ function consultarIdClientes() {
                     success      :  function(json){
                                         $("#idDivConsultaC").empty();
                                         $("#idDivConsultaC").append("<table>");
-                                        $("#idDivConsultaC").append("<caption>Bicicletas</caption>");
+                                        $("#idDivConsultaC").append("<caption>Clientesw</caption>");
                                         $("#idDivConsultaC").append("<tr><th>ID</th><th>NAME</th><th>EMAIL</th><th>AGE</th></tr>");
                                         for (i=0; i < json.items.length; i++){
                                             $("#idDivConsultaC").append("<tr>");
@@ -344,7 +344,7 @@ function consultarIdClientes() {
                                             $("#idDivConsultaC").append("</tr>");
                                         }
                                         $("#idDivConsultaC").append("</table>");
-
+                                        document.getElementById("idClienteConsulta").value = "";
                                         console.log(json)
                                     },
                     error       :   function(xhr,status){
@@ -405,6 +405,8 @@ function insertarMensajes() {
 
             success      :  function(response){
                                consultarMensajes();
+                               document.getElementById("idMensaje").value = "";
+                               document.getElementById("mensaje").value = "";
                                console.log(response);
                             },
             error       :   function(xhr,status){
@@ -434,6 +436,7 @@ function borrarMensajes() {
 
             success      :  function(response){
                                 consultarMensajes();
+                                document.getElementById("idMensajeBorrar").value = "";
                                 console.log(response);
 
                             },
@@ -464,6 +467,8 @@ function actualizarMensajes() {
 
                     success      :  function(response){
                                         consultarMensajes();
+                                        document.getElementById("idMensajeActualizar").value = "";
+                                        document.getElementById("mensajeActualizar").value = "";
                                         console.log(response);
                                     },
                     error       :   function(xhr,status){
@@ -502,7 +507,7 @@ function consultarIdMensajes() {
                                             $("#idDivConsultaM").append("</tr>");
                                         }
                                         $("#idDivConsultaM").append("</table>");
-
+                                        document.getElementById("idMensajeConsulta").value = "";
                                         console.log(json)
                                     },
                     error       :   function(xhr,status){
